@@ -42,7 +42,7 @@ export default function Share({ }) {
   };
 
   const reportOnTelegram = () => {
-    const customUrl = `https://t.me/${siteConfig.telegram}`;
+    const customUrl = `${siteConfig.telegram}`;
     const currentUrl = `${getBaseUrl()}${asPath}`;
     navigator.clipboard.writeText(currentUrl).then(() => {
       window.open(customUrl, '_blank');
