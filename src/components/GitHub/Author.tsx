@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Avatar, User } from "@nextui-org/react";
 import { fetchGitHubUser } from '../../utils/githubApi';
 import { UserCard } from "../Cards/UserCard";
-import Model from "../Tooltip/Model";
+import Dropdown from "../Tooltip/Dropdown";
 
 export const Author = ({ username }) => {
   const [userData, setUserData] = useState(null);
@@ -25,7 +25,7 @@ export const Author = ({ username }) => {
   }
 
   return (
-    <Model
+    <Dropdown
       open={
           <div className="flex">
             <Avatar src={userData.avatar_url} className="bg-gray-200 dark:bg-gray-700"/>

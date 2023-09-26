@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import siteConfig from '../../config/site.config';
 import { FolderCardAnimation } from '../../utils/FramerMotionVariants';
 import { Image } from '@nextui-org/react';
+import Share from '../Share';
 
 const FolderCard = ({date}) => {
   const { query, asPath } = useRouter();
@@ -36,9 +37,12 @@ const FolderCard = ({date}) => {
         <p className="text-[15px] my-1">
           {description}
         </p>
+        <div className="flex items-center justify-between my-2 px-1">
         <p className="text-[16px] text-gray-500 dark:text-gray-500">
           {date}
         </p>
+        <Share />
+      </div>
       </div>
     </motion.article>
   );

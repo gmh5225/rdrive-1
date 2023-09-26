@@ -1,5 +1,5 @@
 import { Divider, Progress } from "@nextui-org/react";
-import Model from "./Tooltip/Model";
+import Dropdown from "./Tooltip/Dropdown";
 import { useDriveStorage, useFolderSize } from "../utils/useDriveStorage";
 import { humanFileSize } from "../utils/fileDetails";
 import { BsApple, BsHddFill } from "react-icons/bs";
@@ -17,7 +17,7 @@ const Storage = ({ token }) => {
   const { folderSize: folderSize3, } = useFolderSize(token, Games);
 
   return (
-    <Model
+    <Dropdown
       open={<div>Storage</div>}
       content={
        <main className="w-full md:w-[300px]  mb-2">

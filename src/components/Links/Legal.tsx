@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import Model from '../Tooltip/Model';
+import Dropdown from '../Tooltip/Dropdown';
 import { Listbox, ListboxItem } from '@nextui-org/react';
 import { BsChatSquareDots, BsFillJournalBookmarkFill } from 'react-icons/bs';
 import { MdPrivacyTip } from 'react-icons/md';
@@ -17,7 +17,7 @@ const Legal = () => {
 
   return (
     <main>
-      <Model 
+      <Dropdown 
         open={<div>Legal</div>} 
         content={
           <main>
