@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon.png">
+	<link rel="shortcut icon" href="apple-touch-icon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <title>No Internet</title>
+</head>
+<body class="min-h-screen">
+<section class="fixed inset-0 bg-white dark:bg-gray-900 bg-[url('offline/offline-bg-light.svg')] dark:bg-[url('offline/offline-bg-dark.svg')]">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative mt-10">
+    <img class="mx-auto" src="offline/offline.png" alt="No Internet" height="300px" width="300px">
+
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Lost Connection</h1>
+      <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">You're offline. Check your connection</p>
+      <button type="button" onClick="window.location.reload()" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2">Try Again</button>
+  </div>
+</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script> 
+</body>
+</html>

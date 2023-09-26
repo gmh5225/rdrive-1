@@ -1,0 +1,153 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "RDRIVE",
+    "short_name": "RDRIVE",
+    "description": "We Provide Mobile Firmware's Drivers Flash Tool FRP Dump FIle EMMC ISP PinOut Samsung MDM File Windows Files.",
+    "icons": [
+        {
+          "src": "icon/maskable_icon_x192.png",
+          "sizes": "192x192",
+          "type": "image/x-icon",
+          "purpose": "maskable"
+        },
+        {
+          "src": "icon/icon-48x48.png",
+          "sizes": "48x48",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-72x72.png",
+          "sizes": "72x72",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-128x128.png",
+          "sizes": "128x128",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-152x152.png",
+          "sizes": "152x152",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "icon/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ],
+    "screenshots": [
+      {
+        "src": "screenshots/home.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      },
+      {
+        "src": "screenshots/about.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      },
+      {
+        "src": "screenshots/frp.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      },
+      {
+        "src": "screenshots/windows.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      },
+      {
+        "src": "screenshots/tool.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      },
+      {
+        "src": "screenshots/drivers.png",
+        "sizes": "411x821",
+        "type": "image/png"
+      }
+    ],
+    "shortcuts": [
+      {
+        "name": "About US",
+        "url": "/about",
+        "icons": [
+          {
+            "src": "shortcuts/about.png",
+            "sizes": "202x202",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      },
+      {
+        "name": "FRP",
+        "url": "/FRP",
+        "icons": [
+          {
+            "src": "shortcuts/frp.png",
+            "sizes": "202x202",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      },
+      {
+        "name": "Windows",
+        "url": "/Windows",
+        "icons": [
+          {
+            "src": "shortcuts/windows.png",
+            "sizes": "202x202",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      },
+      {
+        "name": "Flash Tool",
+        "url": "/Flash-Tool",
+        "icons": [
+          {
+            "src": "shortcuts/tool.png",
+            "sizes": "202x202",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "url": "/Drivers",
+        "icons": [
+          {
+            "src": "shortcuts/drivers.png",
+            "sizes": "202x202",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      }
+    ]
+  }
+  
