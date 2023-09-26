@@ -40,7 +40,7 @@ export function Model({ open, content }): JSX.Element {
                       leaveFrom="opacity-100 scale-100"
                       leaveTo="opacity-0 scale-95"
                     >
-                      <Dialog.Panel className="fixed md:relative bottom-0 md:bottom-none w-full md:max-w-md transform bg-white dark:bg-gray-850 rounded-t-2xl md:rounded-2xl p-2 shadow-xl transition-all">
+                      <Dialog.Panel className="fixed md:relative bottom-0 md:bottom-none w-full md:max-w-md transform bg-white dark:bg-gray-850 rounded-t-2xl md:rounded-2xl p-3 shadow-xl transition-all">
                         <div className="overflow-y-auto"> 
                         <motion.div
                         drag="y" 

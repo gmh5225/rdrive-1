@@ -57,19 +57,16 @@ export default function Share({ }) {
           <main className="text-center">
             <FiShare size={38} className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full mx-auto my-2" />
             <h1 className="text-xl my-3 font-semibold pr-3 line-clamp-1">Share {title}</h1>
-            <div className="h-52">
-              <Image
-                alt={title}
-                className="mx-auto rounded-lg object-contain object-center"
-                src={URL}
-                loading="eager"
-              />
-            </div>
-            <div className="flex justify-center gap-2 items-center mt-6">
-              <Button startContent={<RiTwitterXFill size={22} />} className="w-52" onClick={shareOnTwitter}>
+            <Image
+                  className="object-contain object-center"
+                  src={URL}
+                  alt={title}
+            />
+            <div className="flex justify-center gap-2 items-center mt-4">
+              <Button startContent={<RiTwitterXFill size={22} />} className="w-52 text-xs md:text-base" onClick={shareOnTwitter}>
                 Share on Twitter
               </Button>
-              <Button startContent={<BsFacebook size={22} />} className="w-52" onClick={shareOnFacebook}>
+              <Button startContent={<BsFacebook size={22} />} className="w-52 text-xs md:text-base" onClick={shareOnFacebook}>
                 Share on Facebook
               </Button>
             </div>
@@ -82,10 +79,10 @@ export default function Share({ }) {
               </Button>
             </div> */}
             <div className="flex justify-center gap-2 items-center my-2">
-              <Button startContent={<BsLink45Deg size={22} />} className="w-52" onClick={copyLinkToClipboard}>
+              <Button startContent={<BsLink45Deg size={22} />} className="w-52 text-xs md:text-base" onClick={copyLinkToClipboard}>
                 Copy Link
               </Button>
-              <Button startContent={<GoReport size={22} />} className="w-52" onClick={reportOnTelegram}>
+              <Button startContent={<GoReport size={22} />} className="w-52 text-xs md:text-base" onClick={reportOnTelegram}>
                 Report Link
               </Button>
             </div>
