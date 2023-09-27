@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 export default function Share() {
   const { query, asPath } = useRouter();
   const clipboard = useClipboard();
-  const URL = `/api/og/?link=/${asPath}`;
+  const URL = `/api/og/?link=/${asPath}/`;
   const title = (query.path && Array.isArray(query.path) ? query.path[query.path.length - 1] : '').replaceAll('-', ' ').replaceAll('_', ' ');
 
   const shareOnTwitter = () => {

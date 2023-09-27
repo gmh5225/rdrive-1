@@ -9,7 +9,6 @@ const ImagePreview: FC<{ file: OdFileObject }> = ({ file }) => {
 
   return (
       <PreviewContainer>
-      <div className="relative">
         <Image
           className="mx-auto rounded-lg"
           src={`/api/raw/?path=${asPath}`}
@@ -17,7 +16,6 @@ const ImagePreview: FC<{ file: OdFileObject }> = ({ file }) => {
           width={file.image?.width}
           height={file.image?.height}
         />
-      </div>
       </PreviewContainer>
   )
 }

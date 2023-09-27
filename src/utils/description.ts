@@ -5,8 +5,7 @@ const Description = (): string => {
   const fileName = (query.path && Array.isArray(query.path) ? query.path[query.path.length - 1] : '').replaceAll('-', ' ').replaceAll('_', ' ');
   const extensionIndex = fileName.lastIndexOf('.');
   const title = extensionIndex !== -1 ? fileName.slice(0, extensionIndex) : fileName;
-  const path = asPath.toLowerCase();
-  
+  const path = asPath.toLowerCase(); 
   if (path.includes('apple')) {
     return `Explore ${title} Firmware and solutions for your Apple device, including guides for common issues.`;
 } else if (path.includes('pixelexperience-rom')) {
@@ -27,10 +26,11 @@ const Description = (): string => {
     return `Bypass Factory Reset Protection (FRP) on your device using our proven methods and guides.`;
 } else if (path.includes('icloud')) {
     return `Unlock your iCloud-locked device with our trusted methods, including bypass files and step-by-step instructions.`;
+} else if (path.includes('emmc-isp-pinout')) {
+    return `Unlock your device and perform advanced tasks like file recovery and dead boot repair using the EMMC ISP Pinout method with tools like UFI and Easy Jtag.`;
 } else {
     return `Discover various resources for your ${title} device, including drivers, firmware, tools, and guides.`;
 }
-
 };
 
 export default Description;

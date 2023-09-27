@@ -59,7 +59,6 @@ export default async function handler(req) {
   if (result.type === "folder") {
     structuredUrl += "/icon.png";
   }
-  
   const Description = (): string => { 
     let url = searchParams.get('link') ?? '';
     const path = url.toLowerCase();
@@ -71,9 +70,9 @@ export default async function handler(req) {
       return `Upgrade your device with ${title}, complete with a step-by-step installation guide for increased productivity.`;
   } else if (path.includes('apps/mac-os')) {
       return `Download ${title} for Mac OS devices, complete with step-by-step installation guides.`;
-} else if (path.includes('apps/linux')) {
+  } else if (path.includes('apps/linux')) {
       return `Download ${title} for Linux, complete with step-by-step installation guides.`;
-} else if (path.includes('apps/android')) {
+  } else if (path.includes('apps/android')) {
       return `Download ${title} for Android devices, complete free with step-by-step installation guides.`;
   } else if (path.includes('drivers')) {
       return `Download the latest drivers for seamless device-to-computer communication.`;
@@ -83,6 +82,8 @@ export default async function handler(req) {
       return `Bypass Factory Reset Protection (FRP) on your device using our proven methods and guides.`;
   } else if (path.includes('icloud')) {
       return `Unlock your iCloud-locked device with our trusted methods, including bypass files and step-by-step instructions.`;
+  } else if (path.includes('emmc-isp-pinout')) {
+      return `Unlock your device and perform advanced tasks like file recovery and dead boot repair using the EMMC ISP Pinout method with tools like UFI and Easy Jtag.`;
   } else {
       return `Discover various resources for your ${title} device, including drivers, firmware, tools, and guides.`;
   }
