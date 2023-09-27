@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ShareState {
   isOpen: boolean;
@@ -14,10 +14,10 @@ const shareSlice = createSlice({
   name: 'share',
   initialState,
   reducers: {
-    setIsOpen(state, action) {
+    setIsOpen(state, action: PayloadAction<boolean>) {
       state.isOpen = action.payload;
     },
-    setUrl(state, action) {
+    setUrl(state, action: PayloadAction<string>) {
       state.url = action.payload;
     },
   },

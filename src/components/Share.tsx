@@ -9,20 +9,14 @@ import Model from './Tooltip/Model';
 import toast from 'react-hot-toast';
 import { getBaseUrl } from '../utils/getBaseUrl';
 import { useRouter } from 'next/router';
+import { FolderCardAnimation } from '../utils/FramerMotionVariants';
+import { motion } from 'framer-motion';
 
-export default function Share({ }) {
-  const { query, asPath } = useRouter()
-    const clipboard = useClipboard()
-    const URL = `/api/og/?link=/${asPath}`;
-    const title = (query.path && Array.isArray(query.path) ? query.path[query.path.length - 1] : '').replaceAll('-', ' ').replaceAll('_', ' ');
-
-  // const shareOnWhatsApp = () => {
-  //   window.open(`https://api.whatsapp.com/send?text=${getBaseUrl()}${asPath}`);
-  // };
-
-  // const shareOnTelegram = () => {
-  //   window.open(`https://telegram.me/share/url?url=${getBaseUrl()}${asPath}`);
-  // };
+export default function Share() {
+  const { query, asPath } = useRouter();
+  const clipboard = useClipboard();
+  const URL = `/api/og/?link=/${asPath}`;
+  const title = (query.path && Array.isArray(query.path) ? query.path[query.path.length - 1] : '').replaceAll('-', ' ').replaceAll('_', ' ');
 
   const shareOnTwitter = () => {
     const text = `${title}`;
@@ -52,41 +46,52 @@ export default function Share({ }) {
   return (
     <main>
       <Model
-        open={<div className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full cursor-pointer"><FiShare className="h-4 w-4 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white" /></div>}
+        open={<div><FiShare size={34} className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full mx-auto text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white cursor-pointer" /></div>}
         content={
-          <main className="text-center">
-            <FiShare size={38} className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full mx-auto my-2" />
-            <h1 className="text-xl my-3 font-semibold pr-3 line-clamp-1">Share {title}</h1>
+          <motion.article
+            variants={FolderCardAnimation}
+            viewport={{ once: true }}
+            className="flex flex-col items-center w-full mx-auto gap-3"
+          >
+            <FiShare size={38} className="bg-gray-200 dark:bg-gray-700 p-2 rounded-full mx-auto" />
+            <h1 className="text-xl font-semibold pr-3 line-clamp-1">Share {title}</h1>
             <Image
-                  className="object-contain object-center"
-                  src={URL}
-                  alt={title}
+              src={URL}
+              alt={title}
+              width={1200}
+              height={600}
             />
-            <div className="flex justify-center gap-2 items-center mt-4">
-              <Button startContent={<RiTwitterXFill size={22} />} className="w-52 text-xs md:text-base" onClick={shareOnTwitter}>
-                Share on Twitter
-              </Button>
-              <Button startContent={<BsFacebook size={22} />} className="w-52 text-xs md:text-base" onClick={shareOnFacebook}>
-                Share on Facebook
-              </Button>
+            <div className="flex flex-col w-full h-full gap-2">
+              <div className="flex items-center justify-between gap-2 xss:flex-wrap xs:flex-nowrap">
+                <Button className="w-full bg-[rgba(0,112,243,0.1)]" onPress={shareOnTwitter}>
+                  <div className="flex items-center justify-center w-8 h-8">
+                    <RiTwitterXFill size={22} />
+                  </div>
+                  <div>Share on Twitter</div>
+                </Button>
+                <Button className="w-full bg-[rgba(0,112,243,0.1)]" onPress={shareOnFacebook}>
+                  <div className="flex items-center justify-center w-8 h-8">
+                    <BsFacebook size={22} />
+                  </div>
+                  <div>Share on Facebook</div>
+                </Button>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <Button className="w-full bg-[rgba(0,112,243,0.1)]" onPress={copyLinkToClipboard}>
+                  <div className="flex items-center justify-center w-8 h-8">
+                    <BsLink45Deg size={22} />
+                  </div>
+                  <div>Copy Link</div>
+                </Button>
+                <Button className="w-full bg-[rgba(0,112,243,0.1)]" onPress={reportOnTelegram}>
+                  <div className="flex items-center justify-center w-8 h-8">
+                    <GoReport size={22} />
+                  </div>
+                  <div>Report Link</div>
+                </Button>
+              </div>
             </div>
-            {/* <div className="flex justify-center space-x-4 items-center my-2">
-              <Button startContent={<BsTelegram size={22} />} className="w-52" onClick={shareOnTelegram}>
-                Share on Telegram
-              </Button>
-              <Button startContent={<BsWhatsapp size={22} />} className="w-52" onClick={shareOnWhatsApp}>
-               Share on WhatsApp
-              </Button>
-            </div> */}
-            <div className="flex justify-center gap-2 items-center my-2">
-              <Button startContent={<BsLink45Deg size={22} />} className="w-52 text-xs md:text-base" onClick={copyLinkToClipboard}>
-                Copy Link
-              </Button>
-              <Button startContent={<GoReport size={22} />} className="w-52 text-xs md:text-base" onClick={reportOnTelegram}>
-                Report Link
-              </Button>
-            </div>
-          </main>
+          </motion.article>
         }
       />
     </main>
